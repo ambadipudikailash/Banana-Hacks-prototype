@@ -579,7 +579,8 @@ That is what allows Visual Reverse Engineering to operate across multiple domain
 
 * **Next.js**
 * **TypeScript**
-* **Tailwind CSS**
+* **React**
+* **Global CSS** (current dashboard styling)
 * **React Three Fiber**
 * **Three.js**
 * **Drei**
@@ -611,6 +612,21 @@ That is what allows Visual Reverse Engineering to operate across multiple domain
 * Optional **pgvector**
 
 ---
+
+# Frontend Application
+
+The Next.js app lives in [`frontend/`](frontend/). It includes the dashboard and separate Projects, Resources, Organisations, and About pages, with shared navigation, theme controls, local display profiles, and reduced-motion-aware animations.
+
+To run it locally (Node.js 20.9 or newer):
+
+```powershell
+Copy-Item frontend/.env.example frontend/.env.local
+Set-Location frontend
+npm ci
+npm run dev
+```
+
+The app validates selected image files in the browser, but upload, analysis, sign-in, organisation membership, and project persistence still need their backend/database integrations. The profile menu only switches display names saved in the current browser.
 
 # 🚀 Development Roadmap
 

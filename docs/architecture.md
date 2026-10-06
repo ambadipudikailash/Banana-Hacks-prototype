@@ -77,10 +77,11 @@ All domain adapters and visual reverse engineering processes produce output adhe
 
 ## Important Dependencies
 - **Backend**: Python 3.10+, FastAPI, Pydantic, Google GenAI SDK (`google-genai`).
-- **Frontend**: Node.js 18+, Next.js, React, Tailwind CSS, Three.js / React Three Fiber (for 3D viewer).
-- **Database**: PostgreSQL.
+- **Frontend**: Node.js 20.9+, Next.js 16, React 19, TypeScript 5.9. The current interface uses shared global CSS; 3D libraries are planned but not installed.
+- **Database**: PostgreSQL (planned; no frontend persistence is connected yet).
 
-## Current Implementation Status (Milestone 0)
-- **Repository Setup**: Initialized Git repository with `AGENTS.md` rules and project build specs.
-- **Git Branching**: Created `krishna/backend-ai` tracking branch.
-- **Source Code**: Not yet initialized (Milestone 1 will establish backend structure and dependencies).
+## Current Implementation Snapshot
+- **Backend**: FastAPI foundation, health endpoint, Pydantic system representation, and Gemini service abstraction are in `backend/`.
+- **Frontend**: Next.js application in `frontend/` with dashboard, Projects, Resources, Organisations, and About routes.
+- **Integration status**: Upload, analysis, authentication, organisation membership, and project persistence are not connected yet.
+- **Ownership tracks**: Backend and AI work belongs on `krishna/backend-ai`; frontend and database work belongs on `kailash/frontend-db`.

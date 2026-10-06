@@ -55,16 +55,22 @@ Ensure `GEMINI_API_KEY` is provided in `.env` for AI engine operations. Never co
    ```
 
 ### Frontend Setup (Kailash Track)
-*Prerequisites: Node.js 18+*
+*Prerequisites: Node.js 20.9+*
 
-1. Install Node dependencies (when `package.json` is introduced):
+1. Copy the frontend's public configuration template:
    ```bash
-   npm install
+   cp frontend/.env.example frontend/.env.local
    ```
-2. Run Next.js development server:
+2. Install Node dependencies:
+   ```bash
+   cd frontend
+   npm ci
+   ```
+3. Run Next.js development server:
    ```bash
    npm run dev
    ```
+4. Open the local URL printed by Next.js (normally `http://localhost:3000`).
 
 ---
 
@@ -77,9 +83,11 @@ Ensure `GEMINI_API_KEY` is provided in `.env` for AI engine operations. Never co
   ```
 
 ### Frontend Testing (Kailash Track)
-- Run frontend tests:
+- Run the available frontend checks:
   ```bash
-  npm test
+  cd frontend
+  npm run typecheck
+  npm run build
   ```
 
 ---
